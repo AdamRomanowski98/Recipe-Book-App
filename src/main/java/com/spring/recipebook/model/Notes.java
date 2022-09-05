@@ -1,13 +1,15 @@
 package com.spring.recipebook.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
-@Setter
+@EqualsAndHashCode(exclude = {"recipe"})
+@Data
 public class Notes {
 
     @Id

@@ -7,9 +7,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
-@EqualsAndHashCode(exclude = {"recipe"})
-@Data
 public class Notes {
 
     @Id
@@ -22,4 +22,8 @@ public class Notes {
     @Lob
     private String recipeNotes;
 
+    @Override
+    public String toString() {
+        return "Notes: " +recipeNotes;
+    }
 }
